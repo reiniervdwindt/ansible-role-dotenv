@@ -1,0 +1,9 @@
+---
+# Application
+application_name: "default"
+application_path: "/app/{{ application_name }}"
+
+# Dotenv
+dotenv_file_path: "{{ application_path }}/.env"
+dotenv_separator: "="
+dotenv_items: {}

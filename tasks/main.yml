@@ -1,0 +1,10 @@
+---
+
+- name: "Create and populate dotenv file"
+  lineinfile:
+    path: "{{ dotenv_file_path }}"
+    line: "{{ item.key }}{{ dotenv_separator }}{{ item.value }}"
+    create: yes
+    state: present
+  no_log: yes
+  with_dict: "{{ dotenv_items }}"
